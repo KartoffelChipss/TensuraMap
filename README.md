@@ -7,7 +7,7 @@
 
 ---
 
-<div style="text-align: center;">
+<div align="center">
   <a href="https://tensuramap.j4n.net">
     <img src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/documentation/website_vector.svg" alt="website">
   </a>
