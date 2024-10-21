@@ -29,16 +29,24 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentTooltipContent) tooltip.style.display = 'flex';
 
         const tooltipWidth = tooltip.offsetWidth;
+        const tooltipHeight = tooltip.offsetHeight;
         const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
 
+        // Default positioning (to the right and below the cursor)
         let tooltipX = e.pageX + 10;
-        const tooltipY = e.pageY + 10;
+        let tooltipY = e.pageY + 10;
 
+        // Horizontal Overflow (Check if tooltip overflows on the right side)
         if (tooltipX + tooltipWidth > screenWidth) {
             tooltipX = e.pageX - tooltipWidth - 10;
         }
 
-        // Position the tooltip
+        // Vertical Overflow (Check if tooltip overflows at the bottom)
+        if (tooltipY + tooltipHeight > screenHeight) {
+            tooltipY = e.pageY - tooltipHeight - 10;
+        }
+
         tooltip.style.left = `${tooltipX}px`;
         tooltip.style.top = `${tooltipY}px`;
 
@@ -106,7 +114,8 @@ function getRegionTooltip(element) {
     const regionRuler = element.getAttribute('data-ruler');
     const url = element.getAttribute('data-url');
 
-    let data = url ? `<a href="${url}" target="_blank" rel="noreferrer noopener"><h3>${regionName}</h3></a>` : `<h3>${regionName}</h3>`;
+    // let data = url ? `<a href="${url}" class="titlelink" target="_blank" rel="noreferrer noopener"><h3>${regionName}</h3></a>` : `<h3>${regionName}</h3>`;
+    let data = `<h3>${regionName}</h3>`;
 
     data += `<div class="border"></div>`;
 
@@ -135,6 +144,8 @@ function getRegionTooltip(element) {
         </div>
     `;
 
+    if (url) data += `<a href="${url}" class="icon" target="_blank" rel="noreferrer noopener" class="more"><img src="img/icons/book.svg">Wiki</a>`;
+
     return data;
 }
 
@@ -143,10 +154,12 @@ function getLocationTooltip(location) {
     const locationDescription = location.getAttribute('data-description');
     const url = location.getAttribute('data-url');
 
-    let locationString = url ? `<a href="${url}" target="_blank" rel="noreferrer noopener"><h3>${locationName}</h3></a>` : `<h3>${locationName}</h3>`;
+    // let locationString = url ? `<a href="${url}" class="titlelink" target="_blank" rel="noreferrer noopener"><h3>${locationName}</h3></a>` : `<h3>${locationName}</h3>`;
+    let locationString = `<h3>${locationName}</h3>`;
 
     if (locationDescription) locationString += `<div class="border"></div>`;
     if (locationDescription) locationString += `<span>${locationDescription}</span>`;
+    if (url) locationString += `<a href="${url}" class="icon" target="_blank" rel="noreferrer noopener" class="more"><img src="img/icons/book.svg">Wiki</a>`;
 
     return locationString;
 }

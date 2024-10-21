@@ -34,6 +34,28 @@ span.muted, s {
     color: #a8a8a8;
 }
 
+a {
+    color: #d78453;
+    text-decoration: none;
+
+    &.icon {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        img, svg {
+            --hw: 23px;
+            height: var(--hw);
+            width: var(--hw);
+            min-width: var(--hw);
+        }
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 #map-container {
     display: flex;
     position: relative;
@@ -110,7 +132,7 @@ span.muted, s {
         font-size: 26px;
     }
 
-    a {
+    a.titlelink {
         color: #fff;
         text-decoration: none;
 
