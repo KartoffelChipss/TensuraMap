@@ -67,4 +67,9 @@ const pois = [
         url: "https://tensura.fandom.com/wiki/Magic%20Tower",
         position: { x: "1165", y: "1375" }
     },
+    {
+        name: "Barren Lands",
+        description: "The uninhabitable region laid to waste during the battle between Guy and Milim 2,000 years ago.",
+        position: { x: "509", y: "940" }
+    },
 ]
