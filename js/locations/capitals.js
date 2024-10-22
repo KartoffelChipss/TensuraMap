@@ -17,6 +17,7 @@ const capitals = [
     },
     {
         name: "Rimuru City",
+        description: "Central City Rimuru, Capital of the Jura-Tempest Federation.",
         url: "https://tensura.fandom.com/wiki/Rimuru_City",
         position: { x: "1670", y: "1120" }
     },
