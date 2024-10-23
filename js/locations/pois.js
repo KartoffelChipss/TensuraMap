@@ -9,7 +9,7 @@
 /**
  * @type {[POIData]}
  */
-const pois = [
+export const pois = [
     {
         name: "Sealed Cave",
         description: "The cave where Veldora was sealed and where Rimuru was born.",

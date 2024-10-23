@@ -12,7 +12,7 @@
 /**
  * @type {[NationData]}
  */
-const nations = [
+export const nations = [
     {
         name: "Kingdom of Englassia",
         url: "https://tensura.fandom.com/wiki/Kingdom_of_Englassia",

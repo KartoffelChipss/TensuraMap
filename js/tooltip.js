@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let mouseOnTooltipableArea = false;
     let currentTooltipContent = '';
 
+    setInterval(() => {
+        console.log("Control is held:", isControlHeld);
+    }, 500)
+
     const showTooltip = (content, e) => {
         mouseOnTooltipableArea = true;
         currentTooltipContent = content;

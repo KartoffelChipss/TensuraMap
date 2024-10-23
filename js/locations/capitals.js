@@ -9,7 +9,7 @@
 /**
  * @type {[CapitalData]}
  */
-const capitals = [
+export const capitals = [
     {
         name: "Lune",
         description: "The capital of the Holy Empire Lubelius, home of God Luminous.",
