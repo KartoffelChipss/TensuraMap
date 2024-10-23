@@ -27,7 +27,7 @@ export const pois = [
             credit: "Screenshot from Tensei Shitara Slime Datta Ken. Sourced from the Tensei Shitara Slime Datta Ken Wiki"
         },
         url: "https://tensura.fandom.com/wiki/Sealed_Cave",
-        position: { x: "1680", y: "1080" }
+        position: { x: "1660", y: "1060" }
     },
     {
         name: "Lake Siss",
@@ -38,7 +38,7 @@ export const pois = [
             credit: "Screenshot from Tensei Shitara Slime Datta Ken. Sourced from the Tensei Shitara Slime Datta Ken Wiki"
         },
         url: "https://tensura.fandom.com/wiki/Lake%20Siss",
-        position: { x: "1850", y: "1121" }
+        position: { x: "1835", y: "1100" }
     },
     {
         name: "Khusha Mountains",
@@ -49,18 +49,18 @@ export const pois = [
             credit: "Screenshot from Tensei Shitara Slime Datta Ken, Episode 64. Sourced from the Tensei Shitara Slime Datta Ken Wiki"
         },
         url: "https://tensura.fandom.com/wiki/Khusha%20Mountains",
-        position: { x: "1618", y: "1240" }
+        position: { x: "1600", y: "1180" }
     },
     {
         name: "Scroching God Mountain",
         description: "The holy mountain where the scorch dragon Velgrynd is said to reside.",
         url: "https://tensura.fandom.com/wiki/Scorching%20God%20Mountain",
-        position: { x: "2111", y: "700" }
+        position: { x: "2088", y: "680" }
     },
     {
         name: "Dragon's Den",
         description: "At the peak of the tallest mountain, the Great Canaat Mountains, lies the Dragon's Den where the Dragon Lords reside.",
-        position: { x: "1740", y: "665" }
+        position: { x: "1720", y: "650" }
     },
     {
         name: "Charybdis Cave",
@@ -70,30 +70,30 @@ export const pois = [
             name: "Charybdis Cave from Episode 18",
             credit: "Screenshot from Tensei Shitara Slime Datta Ken, Episode 18. Sourced from the Tensei Shitara Slime Datta Ken Wiki"
         },
-        position: { x: "1956", y: "1010" }
+        position: { x: "1925", y: "990" }
     },
     {
         name: "Divine Tree",
         description: "The Divine Tree, a sacred relic designed to maintain the world. It is home to Elmine, Sarion's Capital.",
         url: "https://tensura.fandom.com/wiki/Divine%20Tree",
-        position: { x: "1420", y: "1450" }
+        position: { x: "1402", y: "1435" }
     },
     {
         name: "Ulgr Nature Park",
         description: "A nature preserve that was formerly home to the Dwelling of the Spirits.",
-        position: { x: "1480", y: "1520" }
+        position: { x: "1460", y: "1500" }
     },
     {
         name: "Heaven Tower",
         description: "The entrance to the Star Palace.",
         url: "https://tensura.fandom.com/wiki/Heaven%20Tower",
-        position: { x: "350", y: "1205" }
+        position: { x: "330", y: "1170" }
     },
     {
         name: "Magic Tower",
         description: "The scholarly facility created by the Trinity Wisemen.",
         url: "https://tensura.fandom.com/wiki/Magic%20Tower",
-        position: { x: "1165", y: "1375" }
+        position: { x: "1138", y: "1355" }
     },
     {
         name: "Barren Lands",
