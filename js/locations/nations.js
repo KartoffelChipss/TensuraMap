@@ -18,7 +18,7 @@ export const nations = [
         url: "https://tensura.fandom.com/wiki/Kingdom_of_Englassia",
         ruler: "King Aegil",
         capital: "Lura",
-        population: "20M Citizens<br>20M Free Association",
+        population: "20M Citizens<br>20M Free People",
         description: "A large country rivaling the Kingdom of Falmuth, the cultural center among the western countries. International organizations such as the Free Association and the western alliance are headquartered here.",
         points: "1123, 936, 1118, 967, 1112, 1015, 1115, 1041, 1115, 1063, 1125, 1083, 1145, 1109, 1179, 1124, 1215, 1134, 1251, 1145, 1284, 1155, 1319, 1154, 1346, 1155, 1369, 1157, 1384, 1144, 1393, 1127, 1397, 1105, 1400, 1088, 1410, 1073, 1425, 1061, 1401, 1049, 1379, 1035, 1346, 1012, 1326, 996, 1317, 979, 1322, 960, 1330, 953, 1316, 945, 1305, 948, 1292, 943, 1278, 945, 1266, 952, 1243, 959, 1227, 959, 1206, 959, 1186, 961, 1171, 951, 1157, 941"
     },
@@ -27,7 +27,7 @@ export const nations = [
         url: "https://tensura.fandom.com/wiki/Kingdom_of_Falmuth",
         ruler: "King Edward<br><s>King Edomalis</s>",
         capital: "Marris",
-        population: "30M Citizens<br>10M Free Association",
+        population: "30M Citizens<br>10M Free People",
         description: "One of the major powers among the western countries, a feudalistic society that stronly favors the nobility. Prospers as a trade route between the eastern and western sides of the continent.",
         points: "1377, 970, 1351, 975, 1318, 975, 1326, 996, 1346, 1012, 1377, 1034, 1401, 1049, 1423, 1060, 1445, 1067, 1462, 1069, 1476, 1067, 1493, 1056, 1505, 1048, 1521, 1039, 1537, 1030, 1549, 1027, 1557, 1026, 1567, 1027, 1575, 1015, 1598, 991, 1610, 977, 1630, 955, 1605, 940, 1584, 928, 1566, 915, 1547, 901, 1533, 887, 1519, 866, 1509, 845, 1503, 826, 1497, 803, 1490, 784, 1474, 799, 1462, 816, 1449, 829, 1444, 851, 1432, 870, 1420, 882, 1407, 899, 1391, 912, 1382, 933, 1372, 946, 1380, 956"
     },
@@ -45,7 +45,7 @@ export const nations = [
         url: "https://tensura.fandom.com/wiki/Kingdom_of_Blumund",
         ruler: "King Drum Blumund",
         capital: "Royal Capital Londo",
-        population: "1M Citizens<br>500K Free Association",
+        population: "1M Citizens<br>500K Free People",
         description: "A small country located in the center of the continent, known for its peaceful coexistence with the surrounding nations. Farming and livestock are commonplace, but most products are used up by the country itself.",
         points: "1474, 1067, 1493, 1056, 1504, 1047, 1520, 1040, 1536, 1030, 1548, 1027, 1555, 1026, 1565, 1027, 1562, 1036, 1556, 1046, 1554, 1056, 1560, 1065, 1570, 1073, 1574, 1084, 1574, 1098, 1573, 1112, 1574, 1125, 1575, 1139, 1574, 1150, 1567, 1163, 1557, 1171, 1547, 1181, 1541, 1188, 1527, 1186, 1511, 1183, 1498, 1177, 1489, 1171, 1481, 1162, 1474, 1151, 1472, 1138, 1473, 1118, 1478, 1101, 1480, 1088, 1477, 1076"
     },
@@ -63,7 +63,7 @@ export const nations = [
         url: "https://tensura.fandom.com/wiki/Nasca_Namrium_Ulmeria_United_Eastern_Empire",
         ruler: "Emperor Masayuki Rudra Nam Ul Nasca",
         capital: "Imperial Capital Nasca",
-        population: "800M Citizens<br>10M Free Association",
+        population: "800M Citizens<br>10M Free People",
         description: "A vast, militaristic power with ambitions of territorial expansion, the Eastern Empire boasts a formidable army and cutting-edge technology, driven by a desire for dominance over the Central Continent.",
         points: "2151, 894, 2145, 894, 2133, 891, 2122, 889, 2110, 886, 2096, 884, 2082, 880, 2069, 878, 2055, 874, 2043, 871, 2030, 869, 2018, 865, 2005, 863, 1990, 859, 1974, 854, 1960, 850, 1967, 827, 1977, 803, 1979, 784, 1972, 774, 1976, 760, 1977, 744, 1975, 728, 1973, 717, 1960, 701, 1951, 691, 1954, 670, 1955, 654, 1956, 637, 1956, 618, 1951, 604, 1943, 592, 1935, 583, 1923, 571, 1912, 567, 1899, 559, 1892, 543, 1892, 533, 1888, 523, 1877, 512, 1866, 504, 1860, 497, 1858, 481, 1862, 471, 1873, 463, 1885, 457, 1892, 456, 1902, 460, 1914, 465, 1917, 466, 1922, 473, 1928, 477, 1939, 480, 1949, 477, 1963, 474, 1970, 471, 1977, 470, 1986, 475, 1997, 480, 2006, 483, 2022, 476, 2029, 471, 2039, 472, 2052, 467, 2062, 462, 2076, 456, 2081, 454, 2092, 460, 2097, 466, 2101, 473, 2105, 482, 2108, 493, 2112, 500, 2118, 507, 2127, 513, 2132, 519, 2143, 522, 2154, 524, 2165, 525, 2177, 523, 2192, 520, 2205, 517, 2213, 515, 2227, 520, 2236, 531, 2242, 542, 2246, 553, 2242, 561, 2241, 567, 2250, 582, 2258, 592, 2264, 591, 2276, 593, 2290, 592, 2301, 585, 2312, 572, 2317, 561, 2318, 538, 2315, 523, 2312, 509, 2303, 501, 2289, 496, 2284, 484, 2277, 475, 2274, 465, 2281, 457, 2296, 456, 2313, 457, 2328, 454, 2337, 444, 2350, 443, 2365, 442, 2378, 445, 2390, 451, 2403, 459, 2410, 463, 2415, 472, 2416, 482, 2423, 492, 2435, 500, 2440, 506, 2439, 518, 2434, 527, 2435, 537, 2438, 551, 2438, 559, 2431, 568, 2421, 583, 2417, 593, 2408, 598, 2404, 608, 2399, 624, 2394, 644, 2388, 646, 2371, 643, 2367, 655, 2368, 668, 2375, 677, 2386, 687, 2400, 684, 2411, 676, 2430, 660, 2432, 651, 2431, 640, 2439, 637, 2452, 642, 2459, 653, 2463, 664, 2465, 684, 2464, 701, 2463, 713, 2461, 729, 2458, 743, 2460, 753, 2467, 764, 2476, 778, 2474, 799, 2470, 817, 2467, 831, 2468, 841, 2475, 850, 2480, 858, 2479, 871, 2475, 885, 2471, 891, 2474, 903, 2470, 909, 2463, 915, 2455, 923, 2449, 931, 2444, 942, 2434, 934, 2423, 926, 2411, 919, 2397, 912, 2385, 905, 2371, 900, 2355, 895, 2339, 892, 2322, 891, 2302, 891, 2285, 892, 2271, 894, 2250, 896, 2231, 897, 2211, 898, 2186, 897, 2169, 896, 2159, 895"
     },
@@ -117,7 +117,7 @@ export const nations = [
         url: "https://tensura.fandom.com/wiki/Sorcerous_Dynasty_of_Sarion",
         ruler: "Elmesia El Ru Sarion",
         capital: "Elmine Sarion",
-        population: "100M Citizens<br>20M Free Association",
+        population: "100M Citizens<br>20M Free People",
         description: "An empire with thirteen elven noble families. Many of the population have elven ancestry and knowledge of magic. The empire is known for its magical prowess and its ability to manipulate the elements. Not part of the western alliance.",
         points: "1186, 1363, 1196, 1359, 1201, 1355, 1212, 1351, 1224, 1353, 1235, 1349, 1244, 1344, 1257, 1340, 1268, 1335, 1279, 1330, 1291, 1324, 1306, 1319, 1321, 1314, 1334, 1309, 1351, 1304, 1364, 1300, 1378, 1297, 1393, 1296, 1408, 1296, 1420, 1296, 1431, 1298, 1446, 1300, 1455, 1303, 1466, 1304, 1483, 1308, 1495, 1311, 1510, 1315, 1526, 1319, 1536, 1323, 1549, 1325, 1553, 1333, 1557, 1350, 1560, 1367, 1568, 1384, 1562, 1395, 1555, 1403, 1554, 1412, 1554, 1426, 1552, 1436, 1552, 1450, 1554, 1464, 1549, 1472, 1547, 1479, 1545, 1492, 1547, 1502, 1556, 1510, 1558, 1515, 1550, 1526, 1539, 1519, 1527, 1515, 1518, 1514, 1505, 1511, 1494, 1510, 1482, 1510, 1468, 1515, 1453, 1522, 1435, 1532, 1425, 1541, 1425, 1552, 1434, 1561, 1425, 1561, 1415, 1565, 1405, 1570, 1396, 1570, 1387, 1565, 1376, 1561, 1367, 1557, 1359, 1555, 1352, 1551, 1337, 1552, 1330, 1548, 1320, 1536, 1311, 1528, 1309, 1522, 1301, 1516, 1291, 1511, 1280, 1495, 1271, 1480, 1262, 1464, 1253, 1447, 1244, 1429, 1232, 1412, 1218, 1393, 1208, 1389, 1201, 1382, 1188, 1381, 1182, 1376, 1194, 1361, 1199, 1356"
     },
@@ -126,7 +126,7 @@ export const nations = [
         url: "https://tensura.fandom.com/wiki/Republic_of_Ulgracia",
         ruler: "",
         capital: "Galut",
-        population: "10M Citizens<br>1M Free Association",
+        population: "10M Citizens<br>1M Free People",
         description: "A prosperous nation known for its technological advancements and emphasis on education, diplomacy, and commerce, Ulgreisia thrives as a hub of innovation and peaceful cooperation with its neighboring nations",
         points: "1434, 1560, 1425, 1552, 1425, 1542, 1435, 1533, 1452, 1523, 1468, 1516, 1480, 1511, 1492, 1510, 1504, 1511, 1516, 1514, 1526, 1515, 1537, 1518, 1548, 1524, 1540, 1533, 1534, 1539, 1528, 1548, 1519, 1559, 1515, 1571, 1506, 1577, 1492, 1582, 1481, 1584, 1469, 1582, 1455, 1572, 1441, 1564"
     },
