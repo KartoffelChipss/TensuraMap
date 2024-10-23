@@ -42,7 +42,10 @@ export default class SlimeMap extends Map {
                 class="location"
                 data-name="${capital.name}"
                 data-url="${capital.url ?? ""}"
-                data-description="${capital.description ?? ""}">
+                data-description="${capital.description ?? ""}"
+                data-image-url="${capital.image?.url ?? ""}"
+                data-image-name="${capital.image?.name ?? ""}"
+                data-image-credit="${capital.image?.credit ?? ""}">
                 <rect x="0" y="0" width="24" height="24" fill="transparent" stroke="transparent" stroke-width="4" />
                 <path d="M4.5 14L3 15V21H7M7 21H10M7 21V13L9.5 11V6L12 3L14.5 6V11L17 13V21M10 21H14M10 21V17C10 15.8954 10.8954 15 12 15C13.1046 15 14 15.8954 14 17V21M14 21H17M17 21H21V15L19.5 14"
                 stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -58,7 +61,10 @@ export default class SlimeMap extends Map {
                 class="location"
                 data-name="${poi.name}"
                 data-description="${poi.description}"
-                data-url="${poi.url ?? ""}">
+                data-url="${poi.url ?? ""}"
+                data-image-url="${poi.image?.url ?? ""}"
+                data-image-name="${poi.image?.name ?? ""}"
+                data-image-credit="${poi.image?.credit ?? ""}">
                 <rect x="-12" y="-12" width="24" height="24" fill="transparent" stroke="transparent" stroke-width="4" />
                 <polygon points="0,-10 3,-3 10,0 3,3 0,10 -3,3 -10,0 -3,-3"
                     fill="white" stroke="black" stroke-width="1" />

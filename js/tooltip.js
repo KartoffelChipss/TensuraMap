@@ -154,14 +154,18 @@ function getRegionTooltip(element) {
 function getLocationTooltip(location) {
     const locationName = location.getAttribute('data-name');
     const locationDescription = location.getAttribute('data-description');
+    const imageUrl = location.getAttribute('data-image-url');
+    const imageName = location.getAttribute('data-image-name');
+    const imageCredit = location.getAttribute('data-image-credit');
     const url = location.getAttribute('data-url');
 
     // let locationString = url ? `<a href="${url}" class="titlelink" target="_blank" rel="noreferrer noopener"><h3>${locationName}</h3></a>` : `<h3>${locationName}</h3>`;
     let locationString = `<h3>${locationName}</h3>`;
 
-    if (locationDescription) locationString += `<div class="border"></div>`;
+    if (locationDescription || imageUrl) locationString += `<div class="border"></div>`;
     if (locationDescription) locationString += `<span>${locationDescription}</span>`;
-    if (url) locationString += `<a href="${url}" class="icon" target="_blank" rel="noreferrer noopener" class="more"><img src="img/icons/book.svg">Wiki</a>`;
+    if (imageUrl) locationString += `<img class="locationimg" src="${imageUrl}" alt="${imageName ?? locationName}" title="${imageCredit ?? ""}">`;
+    if (url) locationString += `<a href="${url}" class="icon" target="_blank" rel="noreferrer noopener" class="more"><img src="img/icons/book.svg" alt="wiki icon">Wiki</a>`;
 
     return locationString;
 }

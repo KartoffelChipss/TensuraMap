@@ -2,8 +2,16 @@
  * @typedef {Object} POIData
  * @property {string} name
  * @property {string} description
+ * @property {POIImage?} image
  * @property {string?} url
  * @property {{x:string,y:string}} position
+ */
+
+/**
+ * @typedef {Object} POIImage
+ * @property {string} url
+ * @property {string} name
+ * @property {string} credit
  */
 
 /**
@@ -13,18 +21,33 @@ export const pois = [
     {
         name: "Sealed Cave",
         description: "The cave where Veldora was sealed and where Rimuru was born.",
+        image: {
+            url: "img/locations/sealed_cave.webp",
+            name: "Sealed Cave",
+            credit: "Screenshot from Tensei Shitara Slime Datta Ken. Sourced from the Tensei Shitara Slime Datta Ken Wiki"
+        },
         url: "https://tensura.fandom.com/wiki/Sealed_Cave",
         position: { x: "1680", y: "1080" }
     },
     {
         name: "Lake Siss",
         description: "A great lake fed by the Ameld River. Home to the Lizardman tribe.",
+        image: {
+            url: "img/locations/lake_siss.webp",
+            name: "Lake Siss",
+            credit: "Screenshot from Tensei Shitara Slime Datta Ken. Sourced from the Tensei Shitara Slime Datta Ken Wiki"
+        },
         url: "https://tensura.fandom.com/wiki/Lake%20Siss",
         position: { x: "1850", y: "1121" }
     },
     {
-        name: "Kusha Mountains",
+        name: "Khusha Mountains",
         description: "A large mountain range that runs from the coast into the Jura Forest. Home to the Tengu tribe.",
+        image: {
+            url: "img/locations/khusha_mountains.webp",
+            name: "Khusha Mountains Episode 64",
+            credit: "Screenshot from Tensei Shitara Slime Datta Ken, Episode 64. Sourced from the Tensei Shitara Slime Datta Ken Wiki"
+        },
         url: "https://tensura.fandom.com/wiki/Khusha%20Mountains",
         position: { x: "1618", y: "1240" }
     },
@@ -42,6 +65,11 @@ export const pois = [
     {
         name: "Charybdis Cave",
         description: "The cave where Charybis was sealed by the Chosen Hero in the distant past. It's location was known only to the hero and the Dryads.",
+        image: {
+            url: "img/locations/charybdis_cave.webp",
+            name: "Charybdis Cave from Episode 18",
+            credit: "Screenshot from Tensei Shitara Slime Datta Ken, Episode 18. Sourced from the Tensei Shitara Slime Datta Ken Wiki"
+        },
         position: { x: "1956", y: "1010" }
     },
     {
