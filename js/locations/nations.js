@@ -23,12 +23,12 @@ export const nations = [
         points: "1123, 936, 1118, 967, 1112, 1015, 1115, 1041, 1115, 1063, 1125, 1083, 1145, 1109, 1179, 1124, 1215, 1134, 1251, 1145, 1284, 1155, 1319, 1154, 1346, 1155, 1369, 1157, 1384, 1144, 1393, 1127, 1397, 1105, 1400, 1088, 1410, 1073, 1425, 1061, 1401, 1049, 1379, 1035, 1346, 1012, 1326, 996, 1317, 979, 1322, 960, 1330, 953, 1316, 945, 1305, 948, 1292, 943, 1278, 945, 1266, 952, 1243, 959, 1227, 959, 1206, 959, 1186, 961, 1171, 951, 1157, 941"
     },
     {
-        name: "Kingdom of Falmuth",
+        name: "Kingdom of Farmenas",
         url: "https://tensura.fandom.com/wiki/Kingdom_of_Falmuth",
-        ruler: "King Edward<br><s>King Edomalis</s>",
+        ruler: "Youm Farmenas <span class='muted'>(King)</span><br>Mjur Farmenas<span class='muted'>(Queen)</span><br><s>King Edward</s><br><s>King Edomalis</s>",
         capital: "Marris",
         population: "30M Citizens<br>10M Free People",
-        description: "One of the major powers among the western countries, a feudalistic society that stronly favors the nobility. Prospers as a trade route between the eastern and western sides of the continent.",
+        description: "One of the major powers among the western countries, a feudalistic society that stronly favors the nobility. Prospers as a trade route between the eastern and western sides of the continent.<br>The country has been established following a coup d'état within the Kingdom of Falmuth.",
         points: "1377, 970, 1351, 975, 1318, 975, 1326, 996, 1346, 1012, 1377, 1034, 1401, 1049, 1423, 1060, 1445, 1067, 1462, 1069, 1476, 1067, 1493, 1056, 1505, 1048, 1521, 1039, 1537, 1030, 1549, 1027, 1557, 1026, 1567, 1027, 1575, 1015, 1598, 991, 1610, 977, 1630, 955, 1605, 940, 1584, 928, 1566, 915, 1547, 901, 1533, 887, 1519, 866, 1509, 845, 1503, 826, 1497, 803, 1490, 784, 1474, 799, 1462, 816, 1449, 829, 1444, 851, 1432, 870, 1420, 882, 1407, 899, 1391, 912, 1382, 933, 1372, 946, 1380, 956"
     },
     {
