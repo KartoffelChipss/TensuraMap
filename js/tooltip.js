@@ -49,8 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         tooltip.style.left = `${tooltipX}px`;
         tooltip.style.top = `${tooltipY}px`;
-
-        console.log("Tooltip positioned at:", tooltipX, tooltipY);
     };
 
     const attachTooltipHandlers = (elements, getContentCallback) => {

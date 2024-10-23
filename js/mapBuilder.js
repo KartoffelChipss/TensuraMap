@@ -1,18 +1,116 @@
 function drawMap() {
     const svg = document.getElementById("map");
     svg.innerHTML = "";
-    svg.innerHTML += `<image href="img/map.webp" width="100%"/>`;
+
+    const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    svg.appendChild(g);
+
+    g.innerHTML += `<image href="img/map.webp" width="100%"/>`;
 
     for (let nation of nations) {
-        addNation(svg, nation);
+        addNation(g, nation);
     }
 
     for (let capital of capitals) {
-        addCapital(svg, capital);
+        addCapital(g, capital);
     }
 
     for (let poi of pois) {
-        addPOI(svg, poi);
+        addPOI(g, poi);
+    }
+
+    let isDragging = false;
+    let startX, startY, initialTranslateX, initialTranslateY, initialScale;
+
+    const dragSensitivity = 2;
+    const maxScale = 6;
+
+    svg.addEventListener("mousedown", (e) => {
+        if (!g.getAttribute("transform") || g.getAttribute("transform").includes("scale(1)")) return;
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+
+        // Get the current transform values, including scale
+        const [translate, scale] = parseTransform(g.getAttribute("transform") || "translate(0,0) scale(1)");
+        initialTranslateX = translate[0];
+        initialTranslateY = translate[1];
+        initialScale = scale;
+    });
+
+    svg.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+
+        const svgRect = svg.getBoundingClientRect();
+        const mapRect = g.getBBox(); // Get the bounding box of the map content
+
+        // Calculate how far the mouse has moved
+        const deltaX = (e.clientX - startX) * dragSensitivity;
+        const deltaY = (e.clientY - startY) * dragSensitivity;
+
+        // New translation values
+        let newTranslateX = initialTranslateX + deltaX;
+        let newTranslateY = initialTranslateY + deltaY;
+
+        // Calculate boundaries
+        const scale = initialScale;
+        const mapWidth = mapRect.width * scale;
+        const mapHeight = mapRect.height * scale;
+        const svgWidth = svgRect.width;
+        const svgHeight = svgRect.height;
+
+        // Constrain the translation to prevent dragging out of bounds
+        const minTranslateX = Math.min(0, svgWidth - mapWidth); // Minimum X translation
+        const minTranslateY = Math.min(0, svgHeight - mapHeight); // Minimum Y translation
+
+        const maxTranslateX = 0; // Maximum X translation
+        const maxTranslateY = 0; // Maximum Y translation
+
+        // Apply constraints
+        newTranslateX = Math.max(minTranslateX, Math.min(maxTranslateX, newTranslateX));
+        newTranslateY = Math.max(minTranslateY, Math.min(maxTranslateY, newTranslateY));
+
+        // Apply the movement to the translation, using the stored initialScale
+        g.setAttribute("transform", `translate(${newTranslateX}, ${newTranslateY}) scale(${scale})`);
+    });
+
+    svg.addEventListener("mouseup", () => {
+        isDragging = false;
+    });
+
+    svg.addEventListener("mouseleave", () => {
+        isDragging = false;
+    });
+
+    svg.addEventListener("wheel", (e) => {
+        e.preventDefault();
+
+        const [translate, scale] = parseTransform(g.getAttribute("transform") || "translate(0,0) scale(1)");
+        const newScale = Math.min(Math.max(scale * (e.deltaY > 0 ? 0.9 : 1.1), 1), maxScale);
+
+        if (newScale === 1) {
+            // Center the map when zoomed out
+            g.setAttribute("transform", `translate(0,0) scale(1)`);
+        } else {
+            // Convert mouse position to SVG coordinates
+            const svgPoint = svg.createSVGPoint();
+            svgPoint.x = e.clientX;
+            svgPoint.y = e.clientY;
+            const mousePoint = svgPoint.matrixTransform(svg.getScreenCTM().inverse());
+
+            // Adjust translation based on new scale
+            const newTranslateX = translate[0] - (mousePoint.x - translate[0]) * (newScale / scale - 1);
+            const newTranslateY = translate[1] - (mousePoint.y - translate[1]) * (newScale / scale - 1);
+            g.setAttribute("transform", `translate(${newTranslateX}, ${newTranslateY}) scale(${newScale})`);
+        }
+    });
+
+    function parseTransform(transform) {
+        const translateMatch = transform.match(/translate\(([^)]+)\)/);
+        const scaleMatch = transform.match(/scale\(([^)]+)\)/);
+        const translate = translateMatch ? translateMatch[1].split(",").map(Number) : [0, 0];
+        const scale = scaleMatch ? parseFloat(scaleMatch[1]) : 1;
+        return [translate, scale];
     }
 }
 
