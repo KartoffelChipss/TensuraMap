@@ -18,6 +18,7 @@ interface MapProps {
 const Map: React.FC<MapProps> = ({ imageUrl, regions = [], cities = [], pois = [], capitals = [] }) => {
     const svgRef = useRef<SVGSVGElement | null>(null);
     const gRef = useRef<SVGGElement | null>(null);
+    const tooltipRef = useRef<HTMLDivElement | null>(null);  // Ref for the tooltip
     const [tooltip, setTooltip] = useState<{ visible: boolean; x: number; y: number; content: JSX.Element | null }>({
         visible: false,
         x: 0,
@@ -45,9 +46,8 @@ const Map: React.FC<MapProps> = ({ imageUrl, regions = [], cities = [], pois = [
             };
 
             const handleMouseMove = (e: MouseEvent) => {
-                if (!isDragging) return;
+                if (!isDragging || scale <= 1) return;
 
-                // Increase deltaX and deltaY by the drag sensitivity factor
                 const deltaX = (e.clientX - startX) * dragSensitivity;
                 const deltaY = (e.clientY - startY) * dragSensitivity;
                 setTranslate(prev => ({
@@ -59,13 +59,10 @@ const Map: React.FC<MapProps> = ({ imageUrl, regions = [], cities = [], pois = [
             };
 
             const handleMouseUp = () => setIsDragging(false);
-
             const handleWheel = (e: WheelEvent) => {
                 e.preventDefault();
                 const zoomFactor = e.deltaY > 0 ? 0.9 : 1.1;
                 const newScale = Math.min(Math.max(scale * zoomFactor, 1), 6);
-
-                // If zooming out to the minimum scale, reset translation
                 if (newScale === 1) {
                     setTranslate({ x: 0, y: 0 });
                 } else {
@@ -73,7 +70,6 @@ const Map: React.FC<MapProps> = ({ imageUrl, regions = [], cities = [], pois = [
                     svgPoint.x = e.clientX;
                     svgPoint.y = e.clientY;
                     const mousePoint = svgPoint.matrixTransform(svgElement.getScreenCTM()?.inverse());
-
                     const newTranslateX = translate.x - (mousePoint.x - translate.x) * (newScale / scale - 1);
                     const newTranslateY = translate.y - (mousePoint.y - translate.y) * (newScale / scale - 1);
                     setTranslate({ x: newTranslateX, y: newTranslateY });
@@ -97,30 +93,54 @@ const Map: React.FC<MapProps> = ({ imageUrl, regions = [], cities = [], pois = [
         }
     }, [isDragging, startX, startY, scale]);
 
-    // Tooltip handling remains unchanged
+    const setDynamicTooltipPosition = (clientX: number, clientY: number) => {
+        if (tooltipRef.current) {
+            const { width, height } = tooltipRef.current.getBoundingClientRect();
+            // console.log("Width:", width, "Height:", height);
+            let tooltipX = clientX + 10;
+            let tooltipY = clientY + 10;
+
+            if (tooltipX + width > window.innerWidth) {
+                // console.log("Horizontal overflow");
+                tooltipX = clientX - width - 10;
+            }
+
+            if (tooltipY + height > window.innerHeight) {
+                // console.log("Vertical overflow");
+                tooltipY = clientY - height - 10;
+            }
+
+            return { tooltipX, tooltipY };
+        }
+        return { tooltipX: clientX, tooltipY: clientY };
+    };
+
     const handleMouseEnterRegion = (event: React.MouseEvent<SVGPolygonElement>, region: MapRegion) => {
+        const { tooltipX, tooltipY } = setDynamicTooltipPosition(event.pageX, event.pageY);
         setTooltip({
             visible: true,
-            x: event.clientX + 10,
-            y: event.clientY + 10,
+            x: tooltipX,
+            y: tooltipY,
             content: <MapRegionTooltip region={region} />,
         });
     };
 
     const handleMouseEnterLocation = (event: React.MouseEvent<SVGGElement>, location: MapLocation) => {
+        const { tooltipX, tooltipY } = setDynamicTooltipPosition(event.clientX, event.clientY);
         setTooltip({
             visible: true,
-            x: event.clientX + 10,
-            y: event.clientY + 10,
+            x: tooltipX,
+            y: tooltipY,
             content: <MapLocationTooltip location={location} />,
         });
     };
 
     const handleMouseMove = (event: React.MouseEvent) => {
+        const { tooltipX, tooltipY } = setDynamicTooltipPosition(event.clientX, event.clientY);
         setTooltip(prev => ({
             ...prev,
-            x: event.clientX + 10,
-            y: event.clientY + 10,
+            x: tooltipX,
+            y: tooltipY,
         }));
     };
 
@@ -130,7 +150,7 @@ const Map: React.FC<MapProps> = ({ imageUrl, regions = [], cities = [], pois = [
 
     return (
         <>
-            <svg ref={svgRef} id="map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2641 2035">
+            <svg ref={svgRef} id="map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2641 2035" onMouseMove={handleMouseMove}>
                 <g ref={gRef} transform={`translate(${translate.x}, ${translate.y}) scale(${scale})`}>
                     <image href={imageUrl} width="100%" />
                     {regions.map((region, index) => (
@@ -142,7 +162,6 @@ const Map: React.FC<MapProps> = ({ imageUrl, regions = [], cities = [], pois = [
                             stroke="transparent"
                             strokeWidth={4}
                             onMouseEnter={(e) => handleMouseEnterRegion(e, region)}
-                            onMouseMove={handleMouseMove}
                             onMouseLeave={handleMouseLeave}
                         />
                     ))}
@@ -177,6 +196,7 @@ const Map: React.FC<MapProps> = ({ imageUrl, regions = [], cities = [], pois = [
             </svg>
             {tooltip.visible && !isDragging && (
                 <div
+                    ref={tooltipRef}  // Attach the ref here
                     id={"tooltip"}
                     className={"tooltip"}
                     style={{
