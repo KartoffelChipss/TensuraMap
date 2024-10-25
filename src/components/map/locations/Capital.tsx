@@ -5,7 +5,7 @@ interface CapitalProps {
     city: MapLocation;
     onMouseEnter: (event: React.MouseEvent<SVGGElement>, city: MapLocation) => void;
     onMouseMove: (event: React.MouseEvent<SVGGElement>) => void;
-    onMouseLeave: () => void;
+    onMouseLeave: (event: React.MouseEvent) => void;
 }
 
 const Capital: React.FC<CapitalProps> = ({ key, city, onMouseEnter, onMouseMove, onMouseLeave }) => (

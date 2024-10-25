@@ -112,10 +112,11 @@ const Map: React.FC<MapProps> = ({ imageUrl, regions = [], cities = [], pois = [
 
             return { tooltipX, tooltipY };
         }
-        return { tooltipX: clientX, tooltipY: clientY };
+        return { tooltipX: clientX + 10, tooltipY: clientY + 10 };
     };
 
     const handleMouseEnterRegion = (event: React.MouseEvent<SVGPolygonElement>, region: MapRegion) => {
+        if (event.metaKey || event.ctrlKey) return;
         const { tooltipX, tooltipY } = setDynamicTooltipPosition(event.pageX, event.pageY);
         setTooltip({
             visible: true,
@@ -126,6 +127,7 @@ const Map: React.FC<MapProps> = ({ imageUrl, regions = [], cities = [], pois = [
     };
 
     const handleMouseEnterLocation = (event: React.MouseEvent<SVGGElement>, location: MapLocation) => {
+        if (event.metaKey || event.ctrlKey) return;
         const { tooltipX, tooltipY } = setDynamicTooltipPosition(event.clientX, event.clientY);
         setTooltip({
             visible: true,
@@ -136,6 +138,7 @@ const Map: React.FC<MapProps> = ({ imageUrl, regions = [], cities = [], pois = [
     };
 
     const handleMouseMove = (event: React.MouseEvent) => {
+        if (event.metaKey || event.ctrlKey) return;
         const { tooltipX, tooltipY } = setDynamicTooltipPosition(event.clientX, event.clientY);
         setTooltip(prev => ({
             ...prev,
@@ -144,7 +147,8 @@ const Map: React.FC<MapProps> = ({ imageUrl, regions = [], cities = [], pois = [
         }));
     };
 
-    const handleMouseLeave = () => {
+    const handleMouseLeave = (event: React.MouseEvent) => {
+        if (event.metaKey || event.ctrlKey) return;
         setTooltip({ visible: false, x: 0, y: 0, content: null });
     };
 

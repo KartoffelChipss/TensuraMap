@@ -5,7 +5,7 @@ interface PoiProps {
     poi: MapLocation;
     onMouseEnter: (event: React.MouseEvent<SVGGElement>, city: MapLocation) => void;
     onMouseMove: (event: React.MouseEvent<SVGGElement>) => void;
-    onMouseLeave: () => void;
+    onMouseLeave: (event: React.MouseEvent) => void;
 }
 
 const City: React.FC<PoiProps> = ({ key, poi, onMouseMove, onMouseLeave, onMouseEnter }) => (
