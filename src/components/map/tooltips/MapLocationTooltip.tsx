@@ -1,4 +1,5 @@
 import {MapLocation} from "../../../types/MapLocation.ts";
+import "./Tooltip.scss";
 
 interface MapLocationTooltipProps {
     location: MapLocation;

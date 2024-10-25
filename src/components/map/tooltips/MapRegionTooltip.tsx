@@ -3,6 +3,7 @@ import CapitalIcon from "../../icons/CapitalIcon.tsx";
 import PopulationIcon from "../../icons/PopulationIcon.tsx";
 import RulerIcon from "../../icons/RulerIcon.tsx";
 import DescriptionIcon from "../../icons/DescriptionIcon.tsx";
+import "./Tooltip.scss";
 
 interface MapLocationTooltipProps {
     region: MapRegion;
