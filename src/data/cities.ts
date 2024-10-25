@@ -1,23 +1,6 @@
-/**
- * @typedef {Object} CityData
- * @property {string} name
- * @property {string?} description
- * @property {CityImage?} image
- * @property {string?} url
- * @property {{x:string,y:string}} position
- */
+import {MapLocation} from "../types/MapLocation.ts";
 
-/**
- * @typedef {Object} CityImage
- * @property {string} url
- * @property {string} name
- * @property {string} credit
- */
-
-/**
- * @type {[CapitalData]}
- */
-export const cities = [
+const cities: MapLocation[] = [
     {
         name: "Tengu Village",
         description: "The village of the Tengu tribe, located in the Khusha Mountains.",
@@ -74,3 +57,5 @@ export const cities = [
         position: { x: "1224", y: "1010" }
     },
 ];
+
+export default cities;

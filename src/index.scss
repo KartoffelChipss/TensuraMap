@@ -1,9 +1,13 @@
-@import "fonts/cormant_garamont.css";
-//@import "fonts/crimson_pro.css";
+@import "variables";
 
-:root {
-    --header-font: "Cormorant Garamond", sans-serif;
-    --body-font: "Crimson Pro", sans-serif;
+#root {
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
 }
 
 body {
@@ -22,7 +26,7 @@ body {
     color: #d78453;
     font-size: 16px;
 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+    font-family: $font;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,31 +77,6 @@ a {
 .region:hover {
     stroke: #fca171;
     fill: rgb(252, 161, 113, .3);
-}
-
-.legend {
-    display: flex;
-    flex-direction: column;
-    padding: 0 15px;
-    flex-grow: 1;
-
-    h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        width: fit-content;
-        margin-bottom: 12px;
-        margin-top: 20px;
-
-        @media (max-width: 768px) {
-            font-size: 1rem;
-        }
-    }
-
-    .border {
-        width: 100%;
-        height: 1px;
-        background-color: #d78453;
-    }
 }
 
 @media (max-width: 1200px) {
@@ -157,12 +136,24 @@ a {
         border-radius: 5px;
     }
 
+    a.more {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        img {
+            --hw: 23px;
+            height: var(--hw);
+            width: var(--hw);
+        }
+    }
+
     .detailbox {
         display: flex;
         //align-items: center;
         gap: 7px;
 
-        img,svg {
+        img, svg {
             --hw: 23px;
             height: var(--hw);
             width: var(--hw);

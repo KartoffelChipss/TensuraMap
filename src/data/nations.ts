@@ -1,18 +1,6 @@
-/**
- * @typedef {Object} NationData
- * @property {string} name
- * @property {string} capital
- * @property {string} description
- * @property {string} ruler
- * @property {string} population
- * @property {string?} url
- * @property {string} points
- */
+import {MapRegion} from "../types/MapRegion.ts";
 
-/**
- * @type {[NationData]}
- */
-export const nations = [
+const nations: MapRegion[] = [
     {
         name: "Kingdom of Englassia",
         url: "https://tensura.fandom.com/wiki/Kingdom_of_Englassia",
@@ -185,3 +173,5 @@ export const nations = [
         points: "1131, 1345, 1142, 1339, 1156, 1337, 1173, 1336, 1181, 1342, 1187, 1345, 1190, 1349, 1193, 1360, 1182, 1363, 1173, 1367, 1167, 1375, 1160, 1375, 1155, 1368, 1146, 1358, 1139, 1352"
     },
 ]
+
+export default nations;

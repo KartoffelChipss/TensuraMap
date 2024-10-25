@@ -1,23 +1,6 @@
-/**
- * @typedef {Object} POIData
- * @property {string} name
- * @property {string} description
- * @property {POIImage?} image
- * @property {string?} url
- * @property {{x:string,y:string}} position
- */
+import {MapLocation} from "../types/MapLocation.ts";
 
-/**
- * @typedef {Object} POIImage
- * @property {string} url
- * @property {string} name
- * @property {string} credit
- */
-
-/**
- * @type {[POIData]}
- */
-export const pois = [
+const pois: MapLocation[] = [
     {
         name: "Sealed Cave",
         description: "The cave where Veldora was sealed and where Rimuru was born.",
@@ -100,4 +83,6 @@ export const pois = [
         description: "The uninhabitable region laid to waste during the battle between Guy and Milim 2,000 years ago.",
         position: { x: "509", y: "940" }
     },
-]
+];
+
+export default pois;

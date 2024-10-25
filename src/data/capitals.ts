@@ -1,23 +1,6 @@
-/**
- * @typedef {Object} CapitalData
- * @property {string} name
- * @property {string?} description
- * @property {CapitalImage?} image
- * @property {string?} url
- * @property {{x:string,y:string}} position
- */
+import {MapLocation} from "../types/MapLocation.ts";
 
-/**
- * @typedef {Object} CapitalImage
- * @property {string} url
- * @property {string} name
- * @property {string} credit
- */
-
-/**
- * @type {[CapitalData]}
- */
-export const capitals = [
+const capitals: MapLocation[] = [
     {
         name: "Lune",
         description: "The capital of the Holy Empire Lubelius, home of God Luminous.",
@@ -149,4 +132,6 @@ export const capitals = [
         url: "https://tensura.fandom.com/wiki/Golden_City_of_El_Dorado",
         position: { x: "800", y: "1565" }
     },
-]
+];
+
+export default capitals;

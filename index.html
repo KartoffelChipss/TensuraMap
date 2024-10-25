@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Interactive Tensei Shitara Slime Datta Ken Map</title>
     <meta name="description" content="Interactive map of the central world of Tensei Shitara Slime Datta Ken (That Time I Got Reincarnated as a Slime)">
 
@@ -29,21 +30,9 @@
     <meta name="twitter:title" content="Interactive Tensei Shitara Slime Datta Ken Map" />
     <meta name="twitter:description" content="Interactive map of the central world of Tensei Shitara Slime Datta Ken (That Time I Got Reincarnated as a Slime)" />
     <meta name="twitter:image" content="/img/twitterImage.png" />
-
-    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-
-<svg id="map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2641 2035"></svg>
-
-<div id="tooltip" class="tooltip"></div>
-
-<div class="legend">
-    <h1>Interactive Map of the Magic Continent</h1>
-    <div class="border"></div>
-</div>
-
-<script src="js/mapBuilder.js" type="module"></script>
-<script src="js/tooltip.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
