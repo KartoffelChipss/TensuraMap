@@ -20,7 +20,7 @@
 
 ### Where does the data come from?
 
-The data comes from the [Tensei Shitara Slime Datta Ken Wiki](https://tensura.fandom.com/wiki/Home) and [this reddit post](https://www.reddit.com/r/TenseiSlime/comments/jh4w8p/heres_a_map_with_most_of_the_countries_and_some/) by u/Racinator.
+The data mainly comes from the [Tensei Shitara Slime Datta Ken Wiki](https://tensura.fandom.com/wiki/Home).
 
 If there are any mistakes or missing countries, please refer to the [How can I contribute or correct mistakes?](#how-can-i-contribute-or-correct-mistakes) section.
 
