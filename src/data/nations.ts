@@ -70,7 +70,7 @@ const nations: MapRegion[] = [
         ruler: "Demon Lord Milim Nava",
         capital: "Dragon City",
         population: "< 100K",
-        description: "The City of the Forgotten Dragon, ruled by Demon Lord Milim, is a dragonewt society where resources are distributed equally through a temple-led system, blending communal support with rewards for hard work.",
+        description: "The City of the Forgotten Dragon, ruled by Demon Lord Milim Nava, is a dragonewt society where resources are distributed equally through a temple-led system, blending communal support with rewards for hard work.",
         points: "1926, 1251, 1935, 1241, 1937, 1229, 1940, 1217, 1944, 1206, 1953, 1193, 1962, 1185, 1976, 1183, 1995, 1182, 2010, 1179, 2022, 1173, 2036, 1164, 2046, 1159, 2058, 1150, 2066, 1144, 2076, 1137, 2089, 1129, 2101, 1117, 2112, 1109, 2129, 1109, 2144, 1110, 2161, 1114, 2175, 1117, 2192, 1121, 2204, 1125, 2217, 1131, 2229, 1139, 2241, 1145, 2257, 1153, 2266, 1158, 2278, 1165, 2291, 1170, 2302, 1175, 2316, 1179, 2327, 1181, 2338, 1183, 2350, 1182, 2357, 1178, 2375, 1195, 2384, 1198, 2390, 1205, 2397, 1213, 2407, 1223, 2417, 1230, 2423, 1233, 2422, 1237, 2414, 1236, 2413, 1244, 2419, 1254, 2428, 1263, 2434, 1267, 2434, 1275, 2434, 1282, 2426, 1300, 2420, 1312, 2411, 1325, 2406, 1333, 2397, 1340, 2392, 1351, 2389, 1361, 2384, 1373, 2376, 1381, 2368, 1385, 2358, 1385, 2346, 1381, 2338, 1373, 2327, 1372, 2310, 1370, 2296, 1366, 2290, 1352, 2279, 1341, 2278, 1347, 2285, 1361, 2286, 1365, 2278, 1365, 2268, 1367, 2258, 1365, 2252, 1369, 2246, 1374, 2246, 1381, 2236, 1383, 2222, 1387, 2209, 1389, 2197, 1393, 2185, 1396, 2176, 1400, 2172, 1401, 2165, 1397, 2153, 1396, 2148, 1393, 2144, 1384, 2140, 1375, 2134, 1368, 2122, 1361, 2117, 1350, 2109, 1344, 2097, 1343, 2084, 1343, 2074, 1343, 2064, 1337, 2054, 1335, 2046, 1335, 2040, 1327, 2034, 1320, 2024, 1319, 2014, 1314, 2000, 1308, 1986, 1299, 1972, 1290, 1964, 1285, 1953, 1272, 1946, 1263, 1938, 1257"
     },
     {
@@ -121,7 +121,7 @@ const nations: MapRegion[] = [
     {
         name: "Holy Empire of Lubelius",
         url: "https://tensura.fandom.com/wiki/Holy_Empire_of_Lubelius",
-        ruler: "Luminous Valentine <span class='muted'>(Holy Figure)</span><br>Louis Valentine <span class='muted'>(Holy Emperor)</span>",
+        ruler: "Demon Lord Luminous Valentine <span class='muted'>(Holy Figure)</span><br>Louis Valentine <span class='muted'>(Holy Emperor)</span>",
         capital: "Lune",
         population: "20M",
         description: "The headquarters of the Western Saint's Chruch, a communistic theocracy led by the pope. A wealthy country amoong the western alliance with vast wheat producing regions.",
