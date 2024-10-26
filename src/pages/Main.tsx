@@ -4,12 +4,14 @@ import nations from "../data/nations.ts";
 import cities from "../data/cities.ts";
 import capitals from "../data/capitals.ts";
 import pois from "../data/pois.ts";
-import {useState} from "react";
+import { useState } from "react";
 
 const Main = () => {
     const [showCapitals, setShowCapitals] = useState(true);
     const [showSettlements, setShowSettlements] = useState(true);
     const [showPOIs, setShowPOIs] = useState(true);
+    const [isDragging, setIsDragging] = useState(false);
+    const [isZoomedIn, setIsZoomedIn] = useState(false);
 
     const onUpdated = (showCapitals: boolean, showSettlements: boolean, showPOIs: boolean) => {
         setShowCapitals(showCapitals);
@@ -25,8 +27,12 @@ const Main = () => {
                 capitals={showCapitals ? capitals : []}
                 cities={showSettlements ? cities : []}
                 pois={showPOIs ? pois : []}
+                onStartDragging={() => setIsDragging(true)}
+                onStopDragging={() => setIsDragging(false)}
+                onZoom={(scale) => setIsZoomedIn(scale > 1)}
             />
             <Legend
+                hidden={isDragging || isZoomedIn}
                 showCapitals={showCapitals}
                 showSettlements={showSettlements}
                 showPOIs={showPOIs}
@@ -34,6 +40,6 @@ const Main = () => {
             />
         </>
     );
-}
+};
 
 export default Main;

@@ -1,18 +1,31 @@
 .legend {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    padding: 0 15px;
+    padding: 0 25px 25px;
     flex-grow: 1;
+    max-width: 500px;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom-right-radius: 12px;
+    z-index: 1000;
+
+    @media (max-width: 1200px) {
+        position: relative;
+        max-width: 100%;
+        margin-top: 20px;
+        background-color: transparent;
+    }
 
     h1 {
         font-size: 3rem;
-        font-weight: 700;
+        font-weight: 800;
         width: fit-content;
         margin-bottom: 12px;
         margin-top: 20px;
 
         @media (max-width: 768px) {
-            font-size: 1rem;
+            font-size: 2.5rem;
         }
     }
 
@@ -26,9 +39,9 @@
 
         border-bottom: 1px solid #a8a8a8;
 
-        @media (max-width: 768px) {
-            font-size: 1rem;
-        }
+        //@media (max-width: 768px) {
+        //    font-size: 1rem;
+        //}
     }
 
     .border {
@@ -44,5 +57,37 @@
         gap: 15px;
 
         padding-left: 7px;
+    }
+
+    .platform-tooltip-info {
+        color: white;
+        z-index: 1;
+
+        .key {
+            background-color: rgba(255, 255, 255, 0.07);
+            padding: 7px 12px;
+            border-radius: 7px;
+            margin: 0 3px;
+            z-index: 0;
+        }
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        a.link {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            img, svg {
+                --hw: 23px;
+                height: var(--hw);
+                width: var(--hw);
+                min-width: var(--hw);
+            }
+        }
     }
 }
