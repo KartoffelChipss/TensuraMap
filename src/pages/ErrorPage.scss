@@ -1,0 +1,51 @@
+main.error {
+    --padding: 15px;
+    width: calc(100% - var(--padding) * 2);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding);
+    padding-top: 10%;
+
+    img.slime {
+        --hw: 125px;
+        width: var(--hw);
+        height: var(--hw);
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0 0 30px;
+        width: fit-content;
+        text-align: center;
+
+        border-bottom: 1px solid #d78453;
+    }
+
+    p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 0;
+        text-align: center;
+    }
+
+    a.button {
+        margin-top: 30px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 7px;
+        background-color: #d78453;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #c26b3f;
+        }
+    }
+}
