@@ -38,10 +38,12 @@ const Legend: React.FC<LegendProps> = ({ showCapitals, showSettlements, showPOIs
 
     return (
         <div className="legend">
-            <h1>Interactive Map of the Magic Continent</h1>
+            <h1>Tensura Map</h1>
             <div className="border"></div>
 
-            <p>This is an interactive map of the world of Tensei Shitara Slime Datta Ken (That Time I Got Reincarnated as a Slime)</p>
+            <p>This is an interactive map of the Magic Continent from Tensei Shitara Slime Datta Ken (That Time I Got Reincarnated as a Slime).</p>
+
+            <p style={{marginTop: "0px"}}>The data mainly comes from the <a href={"https://tensura.fandom.com/wiki/Home"} target={"_blank"} rel={"noreferrer noopener"}>Tensei Shitara Slime Datta Ken Wiki</a>.</p>
 
             <h2>Filters</h2>
             <div className="form">
