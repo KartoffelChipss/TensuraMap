@@ -1,0 +1,31 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+    filter: brightness(0.8);
+
+    &.checked {
+        filter: brightness(1);
+    }
+
+    span {
+        color: white;
+        font-size: 1.1rem;
+    }
+
+    img,svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        --hw: 27px;
+        height: var(--hw);
+        width: var(--hw);
+        min-width: var(--hw);
+    }
+
+    input {
+        //display: none;
+    }
+}

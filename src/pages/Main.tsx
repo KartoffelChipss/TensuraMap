@@ -4,18 +4,34 @@ import nations from "../data/nations.ts";
 import cities from "../data/cities.ts";
 import capitals from "../data/capitals.ts";
 import pois from "../data/pois.ts";
+import {useState} from "react";
 
 const Main = () => {
+    const [showCapitals, setShowCapitals] = useState(true);
+    const [showSettlements, setShowSettlements] = useState(true);
+    const [showPOIs, setShowPOIs] = useState(true);
+
+    const onUpdated = (showCapitals: boolean, showSettlements: boolean, showPOIs: boolean) => {
+        setShowCapitals(showCapitals);
+        setShowSettlements(showSettlements);
+        setShowPOIs(showPOIs);
+    };
+
     return (
         <>
             <Map
                 imageUrl={"/img/map.webp"}
                 regions={nations}
-                cities={cities}
-                capitals={capitals}
-                pois={pois}
+                capitals={showCapitals ? capitals : []}
+                cities={showSettlements ? cities : []}
+                pois={showPOIs ? pois : []}
             />
-            <Legend />
+            <Legend
+                showCapitals={showCapitals}
+                showSettlements={showSettlements}
+                showPOIs={showPOIs}
+                onUpdated={onUpdated}
+            />
         </>
     );
 }
