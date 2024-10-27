@@ -8,7 +8,7 @@
 ---
 
 <div align="center">
-  <a href="https://tensuramap.j4n.net">
+  <a href="https://tensura.j4n.net">
     <img src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/documentation/website_vector.svg" alt="website">
   </a>
   <a href="https://strassburger.org/discord">
@@ -30,7 +30,7 @@ I layed out the map using summerstyles's [html image map creator](https://summer
 
 ### How is it hosted?
 
-I am using GitHub Pages to host this project. You can view the map [here](https://tensuramap.j4n.net).
+I am using GitHub Pages to host this project. You can view the map [here](https://tensura.j4n.net).
 
 ### How can I contribute or correct mistakes?
 
