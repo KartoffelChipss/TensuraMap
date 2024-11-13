@@ -42,7 +42,9 @@
     img.locationimg {
         width: 100%;
         height: auto;
+        max-height: 40vh;
         border-radius: 5px;
+        object-fit: cover;
     }
 
     a.more {

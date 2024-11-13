@@ -19,6 +19,7 @@ const MapLocationTooltip: React.FC<MapLocationTooltipProps> = ({ location }) => 
                     src={location.image.url}
                     alt={location.image.name ?? location.name}
                     title={location.image.credit ?? ""}
+                    onError={(e) => {e.currentTarget.src = "img/locations/image_not_found.webp"}}
                 />
             )}
             {location.url && (

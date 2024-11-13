@@ -76,6 +76,11 @@ const pois: MapLocation[] = [
         name: "Magic Tower",
         description: "The scholarly facility created by the Trinity Wisemen.",
         url: "https://tensura.fandom.com/wiki/Magic%20Tower",
+        image: {
+            url: "img/locations/magic_tower.webp",
+            name: "Magic Tower",
+            credit: "Screenshot from How to Spend a Certain Vacation Volume 1. Sourced from the Tensei Shitara Slime Datta Ken Wiki"
+        },
         position: { x: "1138", y: "1355" }
     },
     {

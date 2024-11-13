@@ -3,7 +3,7 @@ import {MapLocation} from "../types/MapLocation.ts";
 const capitals: MapLocation[] = [
     {
         name: "Lune",
-        description: "The capital of the Holy Empire Lubelius, home of God Luminous.",
+        description: "The capital of the Holy Empire of Lubelius, is a majestic, white-stone city of faith and power, dominated by grand cathedrals and a strict devotion to order.",
         image: {
             url: "img/locations/lune.webp",
             name: "Lune from Episode 50",
